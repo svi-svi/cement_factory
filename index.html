@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бетонний завод</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Навігація -->
+  <header>
+    <nav>
+      <div class="logo">БетонБуд</div>
+      <ul>
+        <li><a href="#about">Про нас</a></li>
+        <li><a href="#catalog">Продукція</a></li>
+        <li><a href="#calculator">Калькулятор</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Головна секція -->
+  <section id="hero">
+    <h1>Бетон та залізобетонні конструкції</h1>
+    <p>Власне виробництво · Доставка · Якість з 2005 року</p>
+    <a href="#contacts" class="btn">Замовити</a>
+  </section>
+
+  <!-- Про завод -->
+  <section id="about">
+    <h2>Про завод</h2>
+    <p>Тут буде опис заводу.</p>
+  </section>
+
+  <!-- Каталог -->
+<section id="catalog">
+  <h2>Продукція</h2>
+  <div class="catalog-grid">
+
+    <div class="card">
+      <div class="card-icon">🧱</div>
+      <h3>Товарний бетон</h3>
+      <p>Марки М100–М500. Підходить для фундаментів, стяжок, монолітного будівництва.</p>
+      <span class="price">від 1 800 грн/м³</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🏗️</div>
+      <h3>Залізобетонні плити</h3>
+      <p>Перекриття ПК і ПКЖ. Стандартні та нестандартні розміри під замовлення.</p>
+      <span class="price">від 4 200 грн/шт</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🪨</div>
+      <h3>Бордюри та лотки</h3>
+      <p>Дорожні бордюри БР, водовідвідні лотки. Висока морозостійкість.</p>
+      <span class="price">від 85 грн/шт</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">⬛</div>
+      <h3>Тротуарна плитка</h3>
+      <p>Товщина 40–80 мм. Різні форми і кольори. Укладка під замовлення.</p>
+      <span class="price">від 320 грн/м²</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🏠</div>
+      <h3>Кільця та люки</h3>
+      <p>Залізобетонні кільця КС для колодязів і септиків. Кришки та люки.</p>
+      <span class="price">від 950 грн/шт</span>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📦</div>
+      <h3>Блоки ФБС</h3>
+      <p>Фундаментні блоки стінові. Марки бетону В15–В25. Є на складі.</p>
+      <span class="price">від 680 грн/шт</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Калькулятор -->
+<section id="calculator">
+  <h2>Калькулятор вартості</h2>
+  <p class="section-subtitle">Розрахуйте потрібний об'єм і вартість бетону</p>
+
+  <div class="calc-wrapper">
+
+    <div class="calc-form">
+      <div class="calc-group">
+        <label>Тип конструкції</label>
+        <select id="calc-type">
+          <option value="foundation">Фундамент</option>
+          <option value="slab">Стяжка підлоги</option>
+          <option value="wall">Стіна</option>
+        </select>
+      </div>
+
+      <div class="calc-group">
+        <label>Довжина (м)</label>
+        <input type="number" id="calc-length" placeholder="напр. 10" min="0">
+      </div>
+
+      <div class="calc-group">
+        <label>Ширина (м)</label>
+        <input type="number" id="calc-width" placeholder="напр. 5" min="0">
+      </div>
+
+      <div class="calc-group">
+        <label>Висота / Товщина (м)</label>
+        <input type="number" id="calc-height" placeholder="напр. 0.3" min="0">
+      </div>
+
+      <div class="calc-group">
+        <label>Марка бетону</label>
+        <select id="calc-grade">
+          <option value="1800">М200 — 1 800 грн/м³</option>
+          <option value="2200">М300 — 2 200 грн/м³</option>
+          <option value="2700">М400 — 2 700 грн/м³</option>
+          <option value="3300">М500 — 3 300 грн/м³</option>
+        </select>
+      </div>
+
+      <button class="btn" id="calc-btn">Розрахувати</button>
+    </div>
+
+    <div class="calc-result" id="calc-result">
+      <div class="result-placeholder">
+        ← Введіть дані і натисніть "Розрахувати"
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Галерея -->
+<section id="gallery">
+  <h2>Галерея</h2>
+  <p class="section-subtitle">Наше виробництво та готова продукція</p>
+
+  <div class="gallery-grid">
+
+    <div class="gallery-item" onclick="openPhoto(this)">
+      <img src="https://placehold.co/600x400/1c2b3a/aac4db?text=Виробництво+бетону" alt="Виробництво бетону">
+      <div class="gallery-overlay">
+        <span>Виробництво бетону</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" onclick="openPhoto(this)">
+      <img src="https://placehold.co/600x400/2e4a62/aac4db?text=Залізобетонні+плити" alt="Залізобетонні плити">
+      <div class="gallery-overlay">
+        <span>Залізобетонні плити</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" onclick="openPhoto(this)">
+      <img src="https://placehold.co/600x400/1c2b3a/aac4db?text=Тротуарна+плитка" alt="Тротуарна плитка">
+      <div class="gallery-overlay">
+        <span>Тротуарна плитка</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" onclick="openPhoto(this)">
+      <img src="https://placehold.co/600x400/2e4a62/aac4db?text=Бордюри+та+лотки" alt="Бордюри та лотки">
+      <div class="gallery-overlay">
+        <span>Бордюри та лотки</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" onclick="openPhoto(this)">
+      <img src="https://placehold.co/600x400/1c2b3a/aac4db?text=Склад+продукції" alt="Склад продукції">
+      <div class="gallery-overlay">
+        <span>Склад продукції</span>
+      </div>
+    </div>
+
+    <div class="gallery-item" onclick="openPhoto(this)">
+      <img src="https://placehold.co/600x400/2e4a62/aac4db?text=Доставка" alt="Доставка">
+      <div class="gallery-overlay">
+        <span>Доставка</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Лайтбокс — збільшене фото -->
+  <div id="lightbox" onclick="closePhoto()">
+    <span id="lightbox-close">✕</span>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+  </div>
+
+</section>
+
+<!-- Контакти -->
+<section id="contacts">
+  <h2>Контакти</h2>
+  <p class="section-subtitle">Залиште заявку і ми зв'яжемось з вами</p>
+
+  <div class="contacts-wrapper">
+
+    <!-- Інформація -->
+    <div class="contacts-info">
+
+      <div class="contact-item">
+        <div class="contact-icon">📍</div>
+        <div>
+          <strong>Адреса</strong>
+          <p>м. Вінниця, вул. Промислова, 12</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">📞</div>
+        <div>
+          <strong>Телефон</strong>
+          <p><a href="tel:+380432123456">+38 (043) 212-34-56</a></p>
+          <p><a href="tel:+380991234567">+38 (099) 123-45-67</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <strong>Email</strong>
+          <p><a href="mailto:info@betonbud.ua">info@betonbud.ua</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon">🕐</div>
+        <div>
+          <strong>Графік роботи</strong>
+          <p>Пн–Пт: 8:00 – 18:00</p>
+          <p>Сб: 9:00 – 14:00</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Форма -->
+    <div class="contacts-form">
+      <div class="form-group">
+        <label>Ваше ім'я</label>
+        <input type="text" id="form-name" placeholder="Петро Іваненко">
+      </div>
+
+      <div class="form-group">
+        <label>Телефон</label>
+        <input type="tel" id="form-phone" placeholder="+38 (0__) ___-__-__">
+      </div>
+
+      <div class="form-group">
+        <label>Продукція</label>
+        <select id="form-product">
+          <option value="">— Оберіть продукцію —</option>
+          <option>Товарний бетон</option>
+          <option>Залізобетонні плити</option>
+          <option>Бордюри та лотки</option>
+          <option>Тротуарна плитка</option>
+          <option>Кільця та люки</option>
+          <option>Блоки ФБС</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Коментар</label>
+        <textarea id="form-comment" rows="4" placeholder="Опишіть обсяг, терміни або інші деталі..."></textarea>
+      </div>
+
+      <button class="btn" id="form-btn">Надіслати заявку</button>
+
+      <div id="form-success" class="form-success">
+        ✅ Дякуємо! Ми зв'яжемось з вами найближчим часом.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <footer>
+    <p>© 2026 БетонБуд. Всі права захищені.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
