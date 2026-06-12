@@ -481,3 +481,80 @@ footer {
   font-size: 0.95rem;
   text-align: center;
 }
+
+/* ====== АДАПТАЦІЯ ПІД МОБІЛЬНИЙ ====== */
+@media (max-width: 768px) {
+
+  /* Навігація */
+  nav {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+  }
+
+  /* Секції — менші відступи */
+  section {
+    padding: 60px 20px;
+  }
+
+  #hero {
+    padding: 80px 20px;
+  }
+
+  #hero h1 {
+    font-size: 1.8rem;
+  }
+
+  #hero p {
+    font-size: 1rem;
+  }
+
+  /* Каталог — 1 колонка замість 3 */
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Калькулятор — одна колонка */
+  .calc-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  /* Галерея — 1 колонка */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Контакти — одна колонка */
+  .contacts-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  /* Лайтбокс */
+  #lightbox img {
+    max-width: 95%;
+  }
+
+}
+
+/* Планшет — 2 колонки */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section {
+    padding: 60px 24px;
+  }
+
+}
